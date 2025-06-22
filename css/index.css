@@ -1,0 +1,153 @@
+.background{
+    width: 100%;
+    transition: opacity 1s ease-in-out; 
+    opacity: 90%;
+}
+.home-about{
+    background-color: black;
+}
+.about-text{
+    z-index: 100;
+    position: absolute;
+    color: #fff;
+    font-size: 64px;
+    font-weight: bold;
+    margin: 380px 64px;
+}
+.dots{
+    position: relative;
+    z-index: 100;
+    margin-top: -30px;
+    text-align:center
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+background-color: brown;
+}
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
+.desgins{
+    margin-top: 30px;
+}
+.row{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+#about-background{
+    background-image: url(../images/about-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box{
+    margin: 20px;
+    display: inline-flex;
+    width: 40%;
+    gap: 40px;
+}
+.box img{
+    width: 50%;
+}
+.holder{
+    box-shadow: 1px 1px 10px #8C8989;
+    margin: 30px;
+    display: inline-flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 0px;
+}
+.holder img{
+    width: 100%;
+}
+.content{
+    padding: 10px;
+}
+button{
+        background-color: #2EC1AC;
+        color: white;
+        font-size: 20px;
+        padding: 5px 20px;
+        border-radius: 5px;
+        margin: 30px;
+        margin-left: auto;
+        margin-right: 10%;
+        position: relative;
+        display: block;
+}
+@media only screen and (max-width: 1200px) and (min-width: 426px){
+    .about-text{
+        font-size: 32px;
+        margin: 280px 64px;
+    }
+    .row{
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .box{
+        margin: 20px;
+        display: inline-flex;
+        width: 80%;
+        gap: 40px;
+    }
+    .box img{
+        width: 50%;
+    }
+    .holder{
+        box-shadow: 1px 1px 10px #8C8989;
+        margin: 30px;
+        display: inline-flex;
+        flex-direction: column;
+        width: 40%;
+        gap: 0px;
+    }
+    .holder img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 426px){
+    .about-text{
+        font-size: 20px;
+        margin: 150px 24px;
+    }
+    .row{
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .box{
+        margin: 8px;
+        display: inline-flex;
+        width: 90%;
+        gap: 40px;
+    }
+    .box img{
+        width: 50%;
+    }
+    .holder{
+        box-shadow: 1px 1px 10px #8C8989;
+        margin: 30px;
+        display: inline-flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 0px;
+    }
+    .holder img{
+        width: 100%;
+    }
+}

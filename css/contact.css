@@ -1,0 +1,116 @@
+.background{
+    width: 100%;
+}
+.about-text {
+    width: 80%;
+    text-align: center;
+    font-size: 24px;
+    margin: 30px 130px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+span{
+    font-size: 40px;
+    font-weight: bolder;
+    padding: 0 20px;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+.box{
+    box-shadow: 1px 1px 10px #8C8989;
+    padding: 30px;
+    width: 30%;
+    height: fit-content;
+}
+.box input{
+    width: 100%;
+    font-size: 15px;
+    padding: 5px;
+    background-color: #F5F5F5;
+    margin-bottom: 20px;
+}
+textarea{
+    width: 100%;
+    height: 100px;
+    font-size: 15px;
+    padding: 5px;
+    background-color: #F5F5F5;
+    resize: none;
+    margin-bottom: 20px;
+}
+.map{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    margin-bottom: 30px;
+}
+.contact{
+    width: 100%;
+    padding: 30px;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+button {
+    background-color: #2EC1AC;
+    color: white;
+    font-size: 20px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: 0;
+    position: relative;
+    display: block;
+}
+@media only screen and (max-width: 1200px) and (min-width: 426px){
+    spam{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .about-text {
+        margin: 30px 90px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 426px){
+    span{
+        font-size: 18px;
+        font-weight: bolder;
+        padding: 0 20px;
+        border: 1px solid black;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+    spam{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .about-text {
+        margin: 10px 40px;
+        font-size: 10px;
+    }
+    .contact{
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .map{
+        margin: 20px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .box{
+        box-shadow: 1px 1px 10px #8C8989;
+        padding: 30px;
+        width: 70%;
+        height: fit-content;
+    }
+}

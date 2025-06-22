@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Khula:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Khula:wght@300;400;600;700;800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="desktop-nav">
+            <h1><img src="./images/logo.png">Decor</h1>
+            <ul>
+                <li>
+                    <a class="active-nav" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./html/design.html">Designs</a>
+                </li>
+                <li>
+                    <a href="./html/decor.html">Decores</a>
+                </li>
+                <li>
+                    <a href="./html/about.html">About us</a>
+                </li>
+                <li>
+                    <a href="./html/contact.html">Contact us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile-nav">
+            <h1><img src="./images/logo.png">Decor</h1>
+            <button onclick="openList()" class="nav-list-btn"><img src="./images/nav-list.png"></button>
+            <ul class="nav-list">
+                <li>
+                    <a class="active-nav" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./html/design.html">Designs</a>
+                </li>
+                <li>
+                    <a href="./html/decor.html">Decores</a>
+                </li>
+                <li>
+                    <a href="./html/about.html">About us</a>
+                </li>
+                <li>
+                    <a href="./html/contact.html">Contact us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="home-about">
+            <p class="about-text">Elevate Your Interiors with Bespoke<br>
+                Design Solutions</p>
+            <img class="background" src="./images/home-1.png">
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <div class="desgins">
+            <h1>Our Designs</h1>
+            <div class="row" id="about-background">
+                <div class="box">
+                    <img src="./images/desgin-1.png">
+                    <div class="content">
+                        <h2>Living Room</h2>
+                        <p>Elegant and inviting living room featuring plush seating, warm lighting, and tasteful decor that creates a cozy, sophisticated ambiance.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="./images/desgin-2.png">
+                        <div class="content">
+                            <h2>Zom Room</h2>
+                            <p>Elegant and inviting living room featuring plush seating, warm lighting, and tasteful decor that creates a cozy, sophisticated ambiance.</p>
+                        </div>
+                </div>
+                <div class="box">
+                    <img src="./images/desgin-3.png">
+                        <div class="content">
+                            <h2>Master Room</h2>
+                            <p>Elegant and inviting living room featuring plush seating, warm lighting, and tasteful decor that creates a cozy, sophisticated ambiance.</p>
+                        </div>
+                </div>
+                <div class="box">
+                    <img src="./images/desgin-4.png">
+                        <div class="content">
+                            <h2>Visitors Room</h2>
+                            <p>Elegant and inviting living room featuring plush seating, warm lighting, and tasteful decor that creates a cozy, sophisticated ambiance.</p>
+                        </div>
+                </div>  
+            </div>
+            <button><a href="./html/design.html">view more</a></button>
+        </div>
+        <div class="decor">
+            <h1>Our Decor</h1>
+            <div class="row">
+                <div class="holder">
+                    <img src="./images/decor-1.png">
+                    <div class="content">
+                        <h2>Painting</h2>
+                        <p>Vibrant colors blend harmoniously, evoking emotion and capturing beauty.</p>
+                    </div>
+                </div>
+                <div class="holder">
+                    <img src="./images/decor-2.png">
+                    <div class="content">
+                        <h2>Bed</h2>
+                        <p>Vibrant colors blend harmoniously, evoking emotion and capturing beauty.</p>
+                    </div>
+                </div>
+                <div class="holder">
+                    <img src="./images/decor-3.png">
+                    <div class="content">
+                        <h2>Working Table</h2>
+                        <p>Vibrant colors blend harmoniously, evoking emotion and capturing beauty.</p>
+                    </div>
+                </div>
+            </div>
+            <button><a href="./html/decor.html">view more</a></button>
+        </div>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="contain">
+                <h2>Decor</h2>
+                <p>Explore our diverse portfolio, find inspiration, and connect with us to transform your space </p>
+            </div>
+            <div class="contain">
+                <h2>Links</h2>
+                <ul>
+                    <li>Home</li>
+                    <li>Design</li>
+                    <li>Decor</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="contain">
+                <h2>Follow Us</h2>
+                <ul>
+                    <li><img src="./images/facebook.png">Facebook</li>
+                    <li><img src="./images/twitter.png">Twitter</li>
+                    <li><img src="./images/instagram.png">Instagram</li>
+                </ul>
+            </div>
+        </div>
+        <div class="rights">
+        © 2023 Interior Design. All rights reserved.
+        </div>
+    </footer>
+</body>
++
+<script src="../js/nav-list.js"></script>
+</html>

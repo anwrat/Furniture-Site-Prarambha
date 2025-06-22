@@ -1,0 +1,95 @@
+.background{
+    width: 100%;
+}
+.about-text {
+    width: 80%;
+    text-align: center;
+    font-size: 34px;
+    margin: 30px 130px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+span{
+    font-size: 40px;
+    font-weight: bolder;
+    padding: 0 20px;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+.card{
+    width: 15%;
+}
+.card img{
+    width: 100%;
+}
+.photo{
+    margin: 20px;
+    width: 30%;
+}
+.photo img{
+    width: 100%;
+}
+.row{
+    align-items: center;
+}
+.about{
+    box-shadow: 1px 1px 10px #8C8989;
+    padding: 20px;
+    font-size: 15px;
+    width: 40%;
+}
+spam{
+    font-size: 24px;
+    font-weight: bold;
+}
+@media only screen and (max-width: 1200px) and (min-width: 426px){
+    spam{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .about-text {
+        margin: 30px 90px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 426px){
+    span{
+        font-size: 18px;
+        font-weight: bolder;
+        padding: 0 20px;
+        border: 1px solid black;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+    spam{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .about-text {
+        margin: 10px 40px;
+        font-size: 10px;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .card{
+        margin: 10px;
+        width: 40%;
+    }
+    .card img{
+        width: 100%;
+    }
+    .photo{
+        margin: 10px;
+        width: 70%;
+    }
+    .about{
+        width: 80%;
+    }
+}

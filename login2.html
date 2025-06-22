@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login & Signup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2 id="formTitle">Login</h2>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button onclick="handleAuth()" id="mainBtn">Login</button>
+
+    <div class="social">
+      <button onclick="googleLogin()">Google</button>
+      <button onclick="facebookLogin()">Facebook</button>
+      <button onclick="appleLogin()">Apple</button>
+    </div>
+
+    <p id="toggle" class="toggle">
+      Don't have an account?
+      <a href="#" onclick="toggleMode()">Sign up</a>
+    </p>
+    <p id="message" class="message"></p>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
