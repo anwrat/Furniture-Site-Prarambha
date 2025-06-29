@@ -29,3 +29,22 @@ exports.deleteDesign = (req, res) => {
     res.status(200).json({ message: 'Design deleted successfully' });
   });
 };
+
+// Fetch all designs
+exports.getAllDesigns = (req, res) => {
+  const query = 'SELECT * FROM designs';
+  db.query(query, (err, results) => {
+    if (err) return res.status(500).json({ error: err });
+    res.json(results);
+  });
+};
+
+// Search designs by name
+exports.searchDesignByName = (req, res) => {
+  const { name } = req.params;
+  const query = 'SELECT * FROM designs WHERE name LIKE ?';
+  db.query(query, [`%${name}%`], (err, results) => {
+    if (err) return res.status(500).json({ error: err });
+    res.json(results);
+  });
+};
