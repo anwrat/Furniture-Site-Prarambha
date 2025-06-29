@@ -45,5 +45,8 @@ Requires a json format like { name, description, image, price }
 1. `/api/decors/` : Create a decor
 2. `/api/decors/update/:id` : Update a decor by id
 3. `/api/decors/delete/:id` : Delete a decor by id
+4. `/api/decors/fetchall` : Get all decors in database
+5. `/api/decors/sort/:order` : (order=asc/desc)Get decors by ascending or descending order
+6. `/api/decors/search/:name` : Find decors by name
 
 
