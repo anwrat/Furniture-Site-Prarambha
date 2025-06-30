@@ -50,5 +50,6 @@ Requires a json format like { name, description, image, price }
 4. `/api/decors/fetchall` : Get all decors in database
 5. `/api/decors/sort/:order` : (order=asc/desc)Get decors by ascending or descending order
 6. `/api/decors/search/:name` : Find decors by name
+7. `/api/decors/filter/price/:max` : Filter decors by max price
 
 

@@ -76,6 +76,9 @@ p{
     background-color: #EFF2F2;
     box-shadow: 1px 1px 10px #8C8989;
 }
+#sort-low-high{
+    cursor:pointer;
+}
 @media only screen and (max-width: 1200px) and (min-width: 426px){
     .filter{
         display: none;

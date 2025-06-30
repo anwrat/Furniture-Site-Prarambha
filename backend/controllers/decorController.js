@@ -61,3 +61,14 @@ exports.getDecorByName = (req, res) => {
     res.json(results);
   });
 };
+
+//Filter by max price
+exports.getDecorsByMaxPrice = (req, res) => {
+  const max = req.params.max;
+  const query = "SELECT * FROM decor WHERE price <= ?";
+  db.query(query, [max], (err, results) => {
+    if (err) return res.status(500).json({ error: err });
+    res.json(results);
+  });
+};
+
