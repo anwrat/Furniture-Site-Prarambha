@@ -108,7 +108,7 @@ function handleAuth() {
     auth.signInWithEmailAndPassword(email, password)
       .then((userCredential) => {
         showMessage("Login successful!");
-        console.log("Logged in:", userCredential.user);
+        window.location.href = "index.html"; // redirect after login
       })
       .catch((error) => {
         showMessage(error.message);
@@ -118,7 +118,6 @@ function handleAuth() {
     auth.createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
         showMessage("Signup successful!");
-        console.log("Signed up:", userCredential.user);
       })
       .catch((error) => {
         showMessage(error.message);
