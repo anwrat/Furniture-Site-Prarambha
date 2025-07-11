@@ -39,6 +39,11 @@
                 <li>
                     <a href="./html/cart.html"><i class="fas fa-shopping-cart"></i></a>
                 </li>
+                <li>
+                <button id="logoutBtn" style="background:none; border:none; color:black; cursor:pointer;">
+                    Logout
+                </button>
+                </li>
             </ul>
         </div>
         <div class="mobile-nav">
@@ -175,7 +180,6 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
 
 <script>
-  // Your Firebase config and initialization
   const firebaseConfig = {
         apiKey: "AIzaSyCDbPte-mt55fH-l99EIDkZHXHWv6pLXi8",
         authDomain: "furniture-site-authentication.firebaseapp.com",
@@ -196,6 +200,26 @@
       console.log("No user is logged in");
     }
   });
+</script>
+
+<script>
+  const logoutBtn = document.getElementById('logoutBtn');
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+      const confirmLogout = confirm("Are you sure you want to logout?");
+      if (confirmLogout) {
+        auth.signOut()
+          .then(() => {
+            alert("Logged out successfully.");
+            window.location.href = "login.html"; // or wherever your login page is
+          })
+          .catch(error => {
+            console.error("Logout failed:", error);
+          });
+      }
+    });
+  }
 </script>
 
 <script src="../js/nav-list.js"></script>

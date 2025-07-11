@@ -67,77 +67,11 @@
         </div>
     </nav>
     <div class="container">
-        <div class="home-about">
-            <p class="about-text">Elevate Your Interiors with Bespoke<br>
-                Design Solutions</p>
-            <img class="background" src="../images/home-1.png">
-            <div class="dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-        <div class="desgins">
-            <h1>Our Designs</h1>
-            <div class="row" id="about-background">
-                <div class="box">
-                    <img src="../images/desgin-1.png">
-                    <div class="content">
-                        <h2>Living Room</h2>
-                        <p>Elegant and inviting living room featuring plush seating, warm lighting, and tasteful decor that creates a cozy, sophisticated ambiance.</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="../images/desgin-2.png">
-                        <div class="content">
-                            <h2>Zom Room</h2>
-                            <p>Elegant and inviting living room featuring plush seating, warm lighting, and tasteful decor that creates a cozy, sophisticated ambiance.</p>
-                        </div>
-                </div>
-                <div class="box">
-                    <img src="../images/desgin-3.png">
-                        <div class="content">
-                            <h2>Master Room</h2>
-                            <p>Elegant and inviting living room featuring plush seating, warm lighting, and tasteful decor that creates a cozy, sophisticated ambiance.</p>
-                        </div>
-                </div>
-                <div class="box">
-                    <img src="../images/desgin-4.png">
-                        <div class="content">
-                            <h2>Visitors Room</h2>
-                            <p>Elegant and inviting living room featuring plush seating, warm lighting, and tasteful decor that creates a cozy, sophisticated ambiance.</p>
-                        </div>
-                </div>  
-            </div>
-            <button><a href="../html/design.html">view more</a></button>
-        </div>
         <div class="decor">
-            <h1>Our Decor</h1>
+            <h1>Your Cart</h1>
             <div class="row">
-                <div class="holder">
-                    <img src="./images/decor-1.png">
-                    <div class="content">
-                        <h2>Painting</h2>
-                        <p>Vibrant colors blend harmoniously, evoking emotion and capturing beauty.</p>
-                    </div>
-                </div>
-                <div class="holder">
-                    <img src="./images/decor-2.png">
-                    <div class="content">
-                        <h2>Bed</h2>
-                        <p>Vibrant colors blend harmoniously, evoking emotion and capturing beauty.</p>
-                    </div>
-                </div>
-                <div class="holder">
-                    <img src="./images/decor-3.png">
-                    <div class="content">
-                        <h2>Working Table</h2>
-                        <p>Vibrant colors blend harmoniously, evoking emotion and capturing beauty.</p>
-                    </div>
-                </div>
+                <div id="cart-items"></div>
             </div>
-            <button><a href="./html/decor.html">view more</a></button>
         </div>
     </div>
     <footer>
@@ -171,4 +105,28 @@
     </footer>
 </body>
 <script src="../js/nav-list.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartContainer = document.getElementById("cart-items");
+
+    if (cart.length === 0) {
+        cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+        return;
+    }
+
+    cart.forEach(item => {
+        const itemBox = document.createElement("div");
+        itemBox.className = "cart-item";
+        itemBox.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <h2>${item.name}</h2>
+        <p>Price: Rs ${item.price}</p>
+        <p>Quantity: ${item.quantity}</p>
+        `;
+        cartContainer.appendChild(itemBox);
+    });
+    });
+
+</script>
 </html>

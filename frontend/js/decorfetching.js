@@ -17,12 +17,32 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="button">
           <span>Rs ${decor.price}</span>
-          <button>Buy</button>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       `;
       container.appendChild(box);
+      const addToCartBtn = box.querySelector(".add-to-cart");
+      addToCartBtn.addEventListener("click", () => {
+        addToCart(decor);
+      });
     });
   }
+
+function addToCart(decor) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const existingItem = cart.find(item => item.id === decor.id);
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({ ...decor, quantity: 1 });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(`${decor.name} added to cart!`);
+}
+
+
 
   // Initial fetch
   fetch("http://localhost:3000/api/decors/fetchall")
@@ -50,5 +70,4 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(renderDecors)
       .catch(err => console.error("Failed to filter by price", err));
   });
-
 });
