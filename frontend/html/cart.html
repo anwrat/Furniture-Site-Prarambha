@@ -17,55 +17,39 @@
 
 </head>
 <body>
+    <!-- Desktop Nav -->
     <nav>
-        <div class="desktop-nav">
-            <h1><img src="../images/logo.png">Decor</h1>
-            <ul>
-                <li>
-                    <a class="active-nav" href="../index.html">Home</a>
-                </li>
-                <li>
-                    <a href="../html/design.html">Designs</a>
-                </li>
-                <li>
-                    <a href="../html/decor.html">Decores</a>
-                </li>
-                <li>
-                    <a href="../html/about.html">About us</a>
-                </li>
-                <li>
-                    <a href="../html/contact.html">Contact us</a>
-                </li>
-                <li>
-                    <a href="../html/cart.html"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-            </ul>
-        </div>
-        <div class="mobile-nav">
-            <h1><img src="../images/logo.png">Decor</h1>
-            <button onclick="openList()" class="nav-list-btn"><img src="../images/nav-list.png"></button>
-            <ul class="nav-list">
-                <li>
-                    <a class="active-nav" href="../index.html">Home</a>
-                </li>
-                <li>
-                    <a href="../html/design.html">Designs</a>
-                </li>
-                <li>
-                    <a href="../html/decor.html">Decores</a>
-                </li>
-                <li>
-                    <a href="../html/about.html">About us</a>
-                </li>
-                <li>
-                    <a href="../html/contact.html">Contact us</a>
-                </li>
-                <li>
-                    <a href="../html/cart.html"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-            </ul>
-        </div>
+    <div class="desktop-nav">
+        <h1><img src="./images/logo.png">Decor</h1>
+        <ul>
+        <li><a class="active-nav" href="index.html">Home</a></li>
+        <li><a href="./html/design.html">Designs</a></li>
+        <li><a href="./html/decor.html">Decores</a></li>
+        <li><a href="./html/about.html">About us</a></li>
+        <li><a href="./html/contact.html">Contact us</a></li>
+        <li><a href="./html/cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+        <li>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </li>
+        </ul>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav">
+        <h1><img src="./images/logo.png">Decor</h1>
+        <button onclick="openList()" class="nav-list-btn"><img src="./images/nav-list.png"></button>
+        <ul class="nav-list" id="navList">
+        <li><a class="active-nav" href="index.html">Home</a></li>
+        <li><a href="./html/design.html">Designs</a></li>
+        <li><a href="./html/decor.html">Decores</a></li>
+        <li><a href="./html/about.html">About us</a></li>
+        <li><a href="./html/contact.html">Contact us</a></li>
+        <li><a href="./html/cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+        <li><button id="logoutBtnMobile" class="logout-btn">Logout</button></li>
+        </ul>
+    </div>
     </nav>
+
     <div class="container">
         <div class="decor">
             <h1>Your Cart</h1>

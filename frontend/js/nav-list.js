@@ -1,6 +1,18 @@
-const ListOpenBtn = document.getElementsByClassName("nav-list-btn");
-const NavList = document.getElementsByClassName("nav-list"); 
+  const menuBtn = document.querySelector(".nav-list-btn");
+  const navList = document.querySelector(".nav-list");
 
-function openList(){
-    document.querySelector(".nav-list").style.display = "flex";
-}
+  function openList() {
+    navList.classList.toggle("show");
+  }
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      !e.target.closest(".nav-list") &&
+      !e.target.closest(".nav-list-btn")
+    ) {
+      navList.classList.remove("show");
+    }
+  });
+
+  window.openList = openList;
