@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <!--For cart icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
@@ -68,9 +69,11 @@
                 <li>
                     <a href="./html/cart.html"><i class="fas fa-shopping-cart"></i></a>
                 </li>
-                <button id="logoutBtn" style="background:none; border:none; color:black; cursor:pointer;">
-                    Logout
-                </button>
+                <li>
+                    <button id="logoutBtn" style="background:none; border:none; color:black; cursor:pointer;">
+                        Logout
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -214,6 +217,7 @@
       if (confirmLogout) {
         auth.signOut()
           .then(() => {
+            localStorage.removeItem("cart");
             alert("Logged out successfully.");
             window.location.href = "login.html"; // or wherever your login page is
           })
