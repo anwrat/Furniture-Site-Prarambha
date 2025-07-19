@@ -41,9 +41,14 @@
                     <a href="./html/cart.html"><i class="fas fa-shopping-cart"></i></a>
                 </li>
                 <li>
-                <button id="logoutBtn" style="background:none; border:none; color:black; cursor:pointer;">
+                <button id="logoutBtn" style="background:none; border:none; color:black; cursor:pointer; display: none;">
                     Logout
                 </button>
+                </li>
+                <li>
+                <a id="loginBtn" href="login.html" style="background:none; border:none; color:black; cursor:pointer; display: none;;">
+                    Login
+                </a>
                 </li>
             </ul>
         </div>
@@ -70,9 +75,14 @@
                     <a href="./html/cart.html"><i class="fas fa-shopping-cart"></i></a>
                 </li>
                 <li>
-                    <button id="logoutBtn" style="background:none; border:none; color:black; cursor:pointer;">
+                    <button id="logoutBtn" style="background:none; border:none; color:black; cursor:pointer; display:none;">
                         Logout
                     </button>
+                </li>
+                <li>
+                    <a id="loginBtn" href="login.html" style="background:none; border:none; color:black; cursor:pointer; display: none;">
+                        Login
+                    </a>
                 </li>
             </ul>
         </div>
@@ -185,49 +195,22 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
 
-<script>
+<!-- <script>
   const firebaseConfig = {
-        apiKey: "AIzaSyCDbPte-mt55fH-l99EIDkZHXHWv6pLXi8",
-        authDomain: "furniture-site-authentication.firebaseapp.com",
-        projectId: "furniture-site-authentication",
-        storageBucket: "furniture-site-authentication.firebasestorage.app",
-        messagingSenderId: "594723399300",
-        appId: "1:594723399300:web:018f82e57641b0a4edc4d1",
-        measurementId: "G-43MHG8KBFJ"
+    apiKey: "AIzaSyCDbPte-mt55fH-l99EIDkZHXHWv6pLXi8",
+    authDomain: "furniture-site-authentication.firebaseapp.com",
+    projectId: "furniture-site-authentication",
+    storageBucket: "furniture-site-authentication.firebasestorage.app",
+    messagingSenderId: "594723399300",
+    appId: "1:594723399300:web:018f82e57641b0a4edc4d1",
+    measurementId: "G-43MHG8KBFJ"
   };
   firebase.initializeApp(firebaseConfig);
-
   const auth = firebase.auth();
 
-  auth.onAuthStateChanged((user) => {
-    if (user) {
-      console.log(`Welcome back, ${user.email}`);
-    } else {
-      console.log("No user is logged in");
-    }
-  });
-</script>
+</script> -->
 
-<script>
-  const logoutBtn = document.getElementById('logoutBtn');
-
-  if (logoutBtn) {
-    logoutBtn.addEventListener('click', () => {
-      const confirmLogout = confirm("Are you sure you want to logout?");
-      if (confirmLogout) {
-        auth.signOut()
-          .then(() => {
-            localStorage.removeItem("cart");
-            alert("Logged out successfully.");
-            window.location.href = "login.html"; // or wherever your login page is
-          })
-          .catch(error => {
-            console.error("Logout failed:", error);
-          });
-      }
-    });
-  }
-</script>
 
 <script src="./js/nav-list.js"></script>
+<script src="./js/auth.js"></script>
 </html>

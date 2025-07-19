@@ -97,6 +97,44 @@ firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 
+  // Wait for DOM first
+  document.addEventListener("DOMContentLoaded", () => {
+    const logoutBtns = document.querySelectorAll("#logoutBtn");
+    const loginBtns = document.querySelectorAll("#loginBtn");
+
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        console.log(`Welcome back, ${user.email}`);
+        // Show logout, hide login
+        logoutBtns.forEach(btn => btn.style.display = "inline");
+        loginBtns.forEach(btn => btn.style.display = "none");
+      } else {
+        console.log("No user is logged in");
+        // Show login, hide logout
+        logoutBtns.forEach(btn => btn.style.display = "none");
+        loginBtns.forEach(btn => btn.style.display = "inline");
+      }
+    });
+
+    // Attach logout handler
+    logoutBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const confirmLogout = confirm("Are you sure you want to logout?");
+        if (confirmLogout) {
+          auth.signOut()
+            .then(() => {
+              localStorage.removeItem("cart");
+              alert("Logged out successfully.");
+              window.location.href = "login.html";
+            })
+            .catch(error => {
+              console.error("Logout failed:", error);
+            });
+        }
+      });
+    });
+  });
+
 let isLogin = true;
 
 function handleAuth() {

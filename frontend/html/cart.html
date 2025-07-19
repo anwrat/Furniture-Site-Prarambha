@@ -40,9 +40,14 @@
                     <a class="active-nav" href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
                 </li>
                 <li>
-                <button id="logoutBtn" style="background:none; border:none; color:black; cursor:pointer;">
+                <button id="logoutBtn" style="background:none; border:none; color:black; cursor:pointer;display: none;">
                     Logout
                 </button>
+                </li>
+                <li>
+                    <a id="loginBtn" href="login.html" style="background:none; border:none; color:black; cursor:pointer; display: none;">
+                        Login
+                    </a>
                 </li>
             </ul>
         </div>
@@ -68,9 +73,16 @@
                 <li>
                     <a class="active-nav" href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
                 </li>
-                <button id="logoutBtn" style="background:none; border:none; color:black; cursor:pointer;">
-                    Logout
-                </button>
+                <li>
+                    <button id="logoutBtn" style="background:none; border:none; color:black; cursor:pointer;display: none;">
+                        Logout
+                    </button>
+                </li>
+                <li>
+                    <a id="loginBtn" href="login.html" style="background:none; border:none; color:black; cursor:pointer; display: none;">
+                        Login
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -138,4 +150,8 @@
     });
 
 </script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+<script src="../js/auth.js"></script>
 </html>
